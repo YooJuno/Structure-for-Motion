@@ -1,7 +1,9 @@
+# [SFM(Structure from Motion) êµ¬í˜„ (with Python)](https://woochan-autobiography.tistory.com/950)
+
 # Structure from Motion (SfM)
 
-Extracting 3D information from a 2D image and reconfiguring it into 3D is called "Structure from Motion". (structure = 3D structure, motion = Camera pose)  
-Structure from Motion(SfM) proceeds with 3D reconstruction of the Structure, as shown in the picture from a sequential set of images.  
+Extracting 3D information from a 2D image and reconfiguring it into 3D is called "Structure from Motion". (structure = 3D structure, motion = Camera pose)
+Structure from Motion(SfM) proceeds with 3D reconstruction of the Structure, as shown in the picture from a sequential set of images.
 It is about how to reconstruct the 3D screen structure accurately, and how to find the camera pose (where the picture was taken), camera intrinsic parameter, and the extrinsic parameter.
 
 ![feature extraction](https://user-images.githubusercontent.com/65938333/192982853-80c89740-cd48-4584-aa3f-bc6575ca16a7.png)
@@ -49,10 +51,10 @@ Download data for example dataset and run in sfm.ipynb
    1. Feature extraction with SIFT
    2. Camera initialization : Find Essential matrix with RANSAC
       1. Suppose canonical camera setup, one camera matrix P = [ I | 0 ] (3x4 Matrix)
-      2. From derivation, there can be 4 possible candidates for P¡¯
-      3. Triangulate 2D point correspondences from first two views, and physically verified P¡¯
+      2. From derivation, there can be 4 possible candidates for Pï¿½ï¿½
+      3. Triangulate 2D point correspondences from first two views, and physically verified Pï¿½ï¿½
 2. Triangulation : Lift 2D points to 3D space using camera matrices
-   1. Given a set of (noisy) matched points : {xi, x¡¯i}
-   2. Camera matrices : P, P¡¯
+   1. Given a set of (noisy) matched points : {xi, xï¿½ï¿½i}
+   2. Camera matrices : P, Pï¿½ï¿½
    3. Estimate the 3D point : X
 3. Structure and motion adjustment (a.k.a. Bundle adjustment)
